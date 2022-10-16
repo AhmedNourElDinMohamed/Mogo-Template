@@ -1,0 +1,53 @@
+@mixin fontFamily($fontName, $fontWeight) {
+  @if $fontName == Montserrat {
+    @font-face {
+      font-family: "#{$fontName}-#{$fontWeight}";
+      src: url("../fonts/#{$fontName}/static/#{$fontName}-#{$fontWeight}.ttf");
+    }
+  }
+  @if ($fontName == KaushanScript) or ($fontName == Roboto) {
+  }
+  @font-face {
+    font-family: "#{$fontName}-#{$fontWeight}";
+    src: url("../fonts/#{$fontName}/#{$fontName}-#{$fontWeight}.ttf");
+  }
+}
+
+// Media Queiries
+@mixin breakPoints($media) {
+  @if $media == mobile {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  // Small devices (landscape phones, 576px and up)
+  @if $media == tablet {
+    @media (min-width: 575.98px) and (max-width: 767.98px) {
+      @content;
+    }
+  }
+  // Medium devices (tablets, 768px and up)
+  @if $media == mediumScreen {
+    @media (min-width: 767.98px) and (max-width: 992px) {
+      @content;
+    }
+  }
+  // Large devices (desktops, 992px and up)
+  @if $media == desktop {
+    @media (min-width: 991.98px) and (max-width: 1199.98px) {
+      @content;
+    }
+  }
+  // X-Large devices (large desktops, 1200px and up)
+  @if $media == xldesktop {
+    @media (min-width: 1199.98px) and (max-width: 1399.98px) {
+      @content;
+    }
+  }
+  // XX-Large devices (larger desktops, 1400px and up)
+  @if $media == xxldesktop {
+    @media (min-width: 1399.98px) {
+      @content;
+    }
+  }
+}

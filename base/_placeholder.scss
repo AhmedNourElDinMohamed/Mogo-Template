@@ -1,0 +1,33 @@
+%tagline-Section {
+  font-family: "KaushanScript-Regular";
+  font-size: 1.5rem;
+}
+%heading-section {
+  font-family: "Montserrat-Bold";
+  font-weight: 900;
+  font-size: 1.9rem;
+  position: relative;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+%heading-section-after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #f38181;
+  position: absolute;
+  left: 50%;
+  top: 150%;
+  transform: translate(-50%, -50%);
+}
+%parag-section {
+  font-family: "Roboto-Regular";
+  font-size: 0.9rem;
+  width: 75%;
+  opacity: 0.5;
+}
+%centerlized-position-absolute {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

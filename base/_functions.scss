@@ -1,0 +1,9 @@
+@function fontFamily($fontName, $fontWeight) {
+  @font-face {
+    font-family: "#{$fontName}-#{$fontWeight}", sans-serif;
+    src: url("../fonts/#{$fontName}/#{$fontName}-#{$fontWeight}.ttf");
+  }
+
+  $res: "#{$fontName}-#{$fontWeight}";
+  @return $res;
+}
